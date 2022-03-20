@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, StyleSheet, TextInput, Button, Keyboard } from 'react-native'
+import { View, Text, StyleSheet, TextInput, Button, TouchableOpacity } from 'react-native'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { user, userDatails } from "../../utils/userDb";
@@ -42,7 +42,11 @@ export default function LoginForm() {
 				value={formik.values.password}
 				onChangeText={(text) => formik.setFieldValue("password", text)}
 			/>
-			<Button title="Log in" onPress={formik.handleSubmit} />
+			<View style={styles.contentButton}>
+				<TouchableOpacity style={styles.button} onPress={formik.handleSubmit}>
+					<Text style={styles.textButton}>Login</Text>
+				</TouchableOpacity>
+			</View>
 			<Text style={styles.err} >{formik.errors.username}</Text>
 			<Text style={styles.err} >{formik.errors.password}</Text>
 			<Text style={styles.err} >{err}</Text>
@@ -83,5 +87,22 @@ const styles = StyleSheet.create({
 		textAlign: "center",
 		color: "#f00",
 		marginTop: 20,
-	}
+	},
+	contentButton: {
+		alignItems: "center"
+	},
+	button: {
+		backgroundColor: "#7C04B8",
+  	borderRadius: 20,
+  	width: 250,
+  	height: 50,
+		paddingHorizontal: 30,
+  	paddingVertical: 5,
+		alignItems: "center"
+ 	},
+ 	textButton: {
+		fontSize: 30,
+  	fontWeight: '400',
+  	color: "#fff",
+ 	}
 })

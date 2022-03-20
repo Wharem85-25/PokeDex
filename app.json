@@ -20,6 +20,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "Wilmer.pokedex",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"

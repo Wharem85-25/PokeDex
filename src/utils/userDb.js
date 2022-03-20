@@ -1,11 +1,11 @@
 export const user = {
-	username: "wharem85",
+	username: "user1",
 	password: "123456"
 };
 
 export const userDatails = {
-	username: "wharem85",
-	firstName: "Wilmer",
-	lastName: "Monterrozo",
-	email: "wharem85@hotmail.com",
+	username: "user1",
+	firstName: "name User",
+	lastName: "lastname User",
+	email: "user@mail.com",
 };
